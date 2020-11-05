@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        <title>URL Shortener</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="original-url">
+                <h2>Original URL</h2>
+                <p><a href="{{ original_url }}">{{ original_url }}</a></p>
+            </div>
+            <div class="shortened-url">
+                <h2>Shortened URL</h2>
+                <p><a href="{{ url_for('short.redirect_to_url', short_url=new_link) }}">{{ url_for('short.redirect_to_url', short_url=new_link, _external=True) }}</a></p>
+            </div>
+        </div>
+    </body>
+</html>
