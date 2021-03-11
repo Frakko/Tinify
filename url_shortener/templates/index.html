@@ -1,25 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-        <title>URL Shortener</title>
-    </head>
-    <body class="index-body">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link rel="icon" href="static/assets/logo.png" />
+    <title>Tinify - URL shortener</title>
+  </head>
+  <body class="index-body">
+    <!-- Header -->
+    <header class="header">
+      <div>
+        <img
+          class="header-logo"
+          src="static/assets/logo.svg"
+          alt="Tinify Logo"
+        />
+      </div>
+      <div class="center-header">
+        <h1><a href="/">Tinify</a></h1>
+        <p>Shorten your URLs with just one click!</p>
+      </div>
+      <div class="links">
+        <a href="#">About</a>
+        <a href="#">History</a>
+      </div>
+    </header>
 
-        <h1>URL Shortener</h1>
+    <!-- Hero section -->
+    <main class="hero">
+      <!-- Input form -->
+      <div class="form">
+        <form
+          action="{{ url_for('short.add_link') }}"
+          method="post"
+          id="main-form"
+        >
+          <input
+            type="url"
+            name="original_url"
+            autocomplete="off"
+            placeholder="Enter your ulr..."
+            required
+          />
+        </form>
+        <button type="submit" form="main-form" class="submit-button">
+          Shorten
+          <img class="link-logo" src="static/assets/link-icon.svg" />
+        </button>
+      </div>
 
-        <div class="form">
-            <form action="{{ url_for('short.add_link') }}" method="post" id="main-form">
-                <input type="text" name="original_url" autocomplete="off" required>
-                <label for="original_url" class="label-name">
-                    <span class="content-name">URL</span>
-                </label>
-            </form>
+      <!-- About cards -->
+      <section class="cards-container">
+        <div class="card">
+          <h3>Speed</h3>
+          <p>We offer a high performance app, optimized for speed quality.</p>
         </div>
-        <div class="submit">
-            <button type="submit" form="main-form" class="submit-button">Shorten</button>
+        <div class="card">
+          <h3>Simplicity</h3>
+          <p>
+            Tinify is a user-friendly app, aimed to be easely usable by
+            everyone.
+          </p>
         </div>
-    </body>
+        <div class="card">
+          <h3>Quality</h3>
+          <p>We offer a high quality product aimed to accustom your needs.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; Tinify - Copyright 2021</p>
+      <p class="bottom">
+        This project is open source and hosted on
+        <a href="https://github.com/Frakko/Tinify">GitHub</a>.
+      </p>
+    </footer>
+  </body>
 </html>

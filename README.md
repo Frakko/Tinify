@@ -11,6 +11,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
+  <img src="url_shortener/static/assets/logo.png" alt="Tinify logo" width="15%">
   <h3 align="center">Tinify</h3>
   <p align="center">
     A simple but awesome URL shortener app!
