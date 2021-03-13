@@ -52,6 +52,13 @@
 
 ## About The Project
 
+<br>
+
+<img src="url_shortener/static/assets/shot-1.png" alt="Project image">
+
+<br>
+<br>
+
 There are already many great URL shortener apps available for free on the internet, however, I wanted to build my own custom one! Even though this is a fairly simple project, It's a great opportunity to learn either new technologies or improve in the ones that you already know.
 
 ULR shorteners work through a technique that goes by the name of redirecting or forwarding. It allows for multiple ULRs to link to the same web page which, under certain circumstances is really useful. Once a web browser attempts to open a ULR which has been redirected, a page with a different ULR is opened.
