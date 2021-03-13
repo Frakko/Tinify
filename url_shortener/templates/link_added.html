@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
-
+    <link rel="icon" href="static/assets/logo.png" />
     <title>URL Shortener</title>
   </head>
 
@@ -15,16 +15,23 @@
     <div class="container">
       <div class="original-url">
         <h2>Original URL</h2>
-        <p><a href="{{ original_url }}">{{ original_url }}</a></p>
+        <p>
+          <a href="{{ original_url }}" target="_blank">{{ original_url }}</a>
+        </p>
       </div>
       <div class="shortened-url">
         <h2>Shortened URL</h2>
         <p>
-          <a href="{{ url_for('short.redirect_to_url', short_url=new_link) }}"
+          <a
+            href="{{ url_for('short.redirect_to_url', short_url=new_link) }}"
+            target="_blank"
             >{{ url_for('short.redirect_to_url', short_url=new_link,
             _external=True) }}</a
           >
         </p>
+      </div>
+      <div class="img-container">
+        <img style="margin-top: 100px" src="{{ qr_code }}" alt="QR-Code" />
       </div>
     </div>
   </body>

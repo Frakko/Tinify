@@ -23,9 +23,11 @@ def add_link():
     link = Link(original_url=original_url) 
     db.session.add(link)
     db.session.commit()
+
+    qr_code = f"https://api.qrserver.com/v1/create-qr-code/?data=http://127.0.0.1:5000/{link.short_url}&size=200x200"
     
     return render_template('link_added.html', 
-        new_link=link.short_url, original_url=link.original_url)
+        new_link=link.short_url, original_url=link.original_url, qr_code=qr_code)
 
 @short.route('/stats')
 def stats():
