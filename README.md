@@ -54,7 +54,7 @@
 
 <br>
 
-<img src="url_shortener/static/assets/shot-1.png" alt="Project image">
+<img src="url_shortener/static/assets/project-preview.png" alt="Project image">
 
 <br>
 <br>
