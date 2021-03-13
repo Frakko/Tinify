@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
 
-    <body>
-
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>Original URL</th>
-                    <th>Short URL</th>
-                    <th>Visits</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for link in links %}
-                <tr>
-                    <td>{{ link.original_url }}</td>
-                    <td>{{ link.short_url }}</td>
-                    <td>{{ link.visits }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        
-    </body>
+  <body>
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Original URL</th>
+          <th>Short URL</th>
+          <th>Visits</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for link in links %}
+        <tr>
+          <td>{{ link.original_url }}</td>
+          <td>{{ link.short_url }}</td>
+          <td>{{ link.visits }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
 </html>
