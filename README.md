@@ -57,7 +57,6 @@
 <img src="url_shortener/static/assets/project-preview.png" alt="Project image">
 
 <br>
-<br>
 
 There are already many great URL shortener apps available for free on the internet, however, I wanted to build my own custom one! Even though this is a fairly simple project, It's a great opportunity to learn either new technologies or improve in the ones that you already know.
 
@@ -90,11 +89,7 @@ To get a local copy of the project up and running follow these simple steps list
 
   ```sh
   python --version
-  ```
-
-  or
-
-  ```sh
+  # or
   python3 --version
   ```
 
@@ -104,11 +99,7 @@ To get a local copy of the project up and running follow these simple steps list
 
   ```sh
   pip --version
-  ```
-
-  or
-
-  ```sh
+  # or
   pip3 --version
   ```
 
@@ -126,21 +117,16 @@ To get a local copy of the project up and running follow these simple steps list
 
 1. Clone the repository
 
-   - Through SSH:
-
    ```sh
-   git clone git@github.com:Frakko/URL-Shortener.git
-   ```
-
-   - Through HTTPS:
-
-   ```sh
-   git clone https://github.com/Frakko/URL-Shortener.git
+   # Through SSH
+   git clone git@github.com:Frakko/Tinify.git
+   # Through HTTPS
+   git clone https://github.com/Frakko/Tinify.git
    ```
 
 1. CD in to the project folder:
    ```sh
-   cd url_shortener
+   cd Tinify
    ```
 1. Start Pipenv's virtual enviroment:
    ```sh
@@ -149,15 +135,12 @@ To get a local copy of the project up and running follow these simple steps list
 1. Install the required Python packages:
    ```sh
    pipenv install
-   ```
-   or
-   ```sh
+   # or
    pipenv sync
    ```
 1. Create the Sqlite database:
 
-   - In the `settings.py` file change the constant `SQLALCHEMY_DATABASE_URI` to a hard coded database link that looks like this: `sqlite:///db.sqlite3` (SQLite does not impose any naming requirements, thus you can name the database as you wish).
-     This will later on be loaded from an enviroment variable, however those variables get loaded only once `flask run` is called, therefore we would have some issues when creating the database.
+   - In the `settings.py` file change the constant `SQLALCHEMY_DATABASE_URI` to a hard coded database link that looks like this: `sqlite:///db.sqlite3` (SQLite does not impose any naming requirements, thus you can name the database as you wish). This will later on be loaded from an enviroment variable, however those variables get loaded only once `flask run` is called, therefore we would have some issues when creating the database.
 
    - Open then the Python shell in your terminal by running the `python` command.
 
