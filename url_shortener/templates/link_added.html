@@ -10,29 +10,59 @@
     <link rel="icon" href="static/assets/logo.png" />
     <title>URL Shortener</title>
   </head>
-
   <body>
-    <div class="container">
-      <div class="original-url">
-        <h2>Original URL</h2>
-        <p>
-          <a href="{{ original_url }}" target="_blank">{{ original_url }}</a>
-        </p>
+    <!-- Header -->
+    <header class="header">
+      <div>
+        <img
+          class="header-logo"
+          src="static/assets/logo.svg"
+          alt="Tinify Logo"
+        />
       </div>
-      <div class="shortened-url">
-        <h2>Shortened URL</h2>
-        <p>
-          <a
-            href="{{ url_for('short.redirect_to_url', short_url=new_link) }}"
-            target="_blank"
-            >{{ url_for('short.redirect_to_url', short_url=new_link,
-            _external=True) }}</a
-          >
-        </p>
+      <div class="center-header">
+        <h1><a href="/">Tinify</a></h1>
+        <p>Shorten your URLs with just one click!</p>
       </div>
+      <div class="links">
+        <a href="#">About</a>
+        <a href="#">History</a>
+      </div>
+    </header>
+
+    <!-- Hero section -->
+    <main class="hero">
+      <!-- Shortened link -->
+      <div class="result">
+        <div class="display-link">
+          <p>
+            {{ url_for('short.redirect_to_url', short_url=new_link,
+            _external=True) }}
+          </p>
+        </div>
+        <div class="copy-button-container">
+          <button class="copy-button">
+            Copy
+            <img class="copy-logo" src="static/assets/link-icon.svg" />
+          </button>
+        </div>
+      </div>
+      <p class="description">
+        Directly copy the URL above or scan the QR code below!
+      </p>
+      <!-- QR code -->
       <div class="img-container">
-        <img style="margin-top: 100px" src="{{ qr_code }}" alt="QR-Code" />
+        <img style="text-align: center" src="{{ qr_code }}" alt="QR-Code" />
       </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer-rp">
+      <p>&copy; Tinify - Copyright 2021</p>
+      <p class="bottom">
+        This project is open source and hosted on
+        <a href="https://github.com/Frakko/Tinify">GitHub</a>.
+      </p>
+    </footer>
   </body>
 </html>
