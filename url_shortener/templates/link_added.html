@@ -35,13 +35,13 @@
       <!-- Shortened link -->
       <div class="result">
         <div class="display-link">
-          <p>
+          <p id="to-cp">
             {{ url_for('short.redirect_to_url', short_url=new_link,
             _external=True) }}
           </p>
         </div>
         <div class="copy-button-container">
-          <button class="copy-button">
+          <button class="copy-button" onclick="copyText()">
             Copy
             <img class="copy-logo" src="static/assets/link-icon.svg" />
           </button>
@@ -64,5 +64,7 @@
         <a href="https://github.com/Frakko/Tinify">GitHub</a>.
       </p>
     </footer>
+
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
   </body>
 </html>
