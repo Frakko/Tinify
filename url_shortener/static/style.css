@@ -84,12 +84,12 @@ p {
 
 .hero {
   margin-top: 150px;
+  width: 100%;
 }
 
 .form {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
 }
 
@@ -97,12 +97,11 @@ p {
   border: 1px solid #6c757d;
   outline: none;
   height: 73px;
-  width: 800px;
+  width: 700px;
   font-size: 25px;
   border-top-left-radius: 39px;
   border-bottom-left-radius: 39px;
   padding-left: 20px;
-  position: relative;
 }
 
 ::placeholder {
@@ -116,19 +115,19 @@ p {
   outline: none;
   height: 73px;
   width: 200px;
+  min-width: 200px;
   font-size: 23px;
   font-weight: 600;
   border-top-right-radius: 39px;
   border-bottom-right-radius: 39px;
-  position: absolute;
-  left: 1195px;
   cursor: pointer;
   padding-right: 40px;
+  position: relative;
 }
 
 .link-logo {
   position: absolute;
-  right: 35px;
+  left: 140px;
 }
 
 .cards-container {
