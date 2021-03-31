@@ -82,6 +82,10 @@ p {
   text-decoration: underline;
 }
 
+.menu {
+  display: none;
+}
+
 .hero {
   margin-top: 150px;
   width: 100%;
@@ -135,6 +139,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding-top: 100px;
 }
 
 .card {
@@ -143,7 +148,6 @@ p {
   height: 270px;
   border-radius: 25px;
   margin: 1em;
-  margin-top: 100px;
   padding: 2em 3.3em 2em 3.3em;
 }
 

@@ -7,6 +7,10 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='responsive.css') }}"
+    />
     <link rel="icon" href="static/assets/logo.png" />
     <title>URL Shortener</title>
   </head>
@@ -23,6 +27,9 @@
       <div class="center-header">
         <h1><a href="/">Tinify</a></h1>
         <p>Shorten your URLs with just one click!</p>
+      </div>
+      <div class="menu">
+        <img src="static/assets/menu.svg" alt="Menu" class="menu-inner" />
       </div>
       <div class="links">
         <a href="#">About</a>

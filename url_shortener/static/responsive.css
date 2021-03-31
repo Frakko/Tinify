@@ -1,0 +1,161 @@
+/* Tablet */
+@media (max-width: 768px) {
+  body {
+    padding: 0 30px 0 30px;
+    width: auto;
+    height: auto;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .form input {
+    width: 400px;
+  }
+
+  .footer {
+    padding-bottom: 30px;
+  }
+
+  .header-logo {
+    width: 100px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .menu-inner {
+    width: 50px;
+  }
+
+  .center-header h1 {
+    font-size: 50px;
+  }
+
+  .header p {
+    text-align: center;
+    font-weight: 400;
+  }
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+  body {
+    width: auto;
+    height: auto;
+  }
+
+  .header {
+    height: 100px;
+  }
+
+  .header-logo {
+    width: 30px;
+  }
+
+  .menu-inner {
+    width: 30px;
+  }
+
+  .center-header {
+    margin-top: 200px;
+  }
+
+  .center-header h1 {
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
+
+  .form input {
+    width: 200px;
+    height: 43px;
+    font-size: 16px;
+  }
+
+  .submit-button {
+    height: 43px;
+    width: 100px;
+    min-width: 50px;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .link-logo {
+    display: none;
+  }
+
+  .copy-logo {
+    display: none;
+  }
+
+  .card {
+    width: 260px;
+    height: 140;
+  }
+
+  .card p {
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  .card h3 {
+    font-size: 23px;
+    text-align: center;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .footer {
+    margin-top: 70px;
+  }
+
+  .result {
+    width: 100%;
+    padding: 0;
+  }
+
+  .display-link {
+    width: 300px;
+    height: 43px;
+    max-width: 300px;
+    font-size: 16px;
+    padding: 0;
+    text-align: left;
+    margin-left: 95px;
+  }
+
+  .copy-button-container {
+    height: 43px;
+    width: 100px;
+  }
+
+  .copy-button {
+    width: 100px;
+    height: 43px;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .display-link p {
+    font-size: 16px;
+    text-indent: 10px;
+    padding: 10px 0 10px 0;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .img-container {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: 80px;
+  }
+}
